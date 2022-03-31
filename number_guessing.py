@@ -13,17 +13,20 @@ def main():
     # and tells the user if they guessed corretly
 
     # input
-    user_guess = int(input("Insert any number between 0-9 (integers): "))
-    number = random.randint(1, 9)
-
+    number_as_string = input("Insert any number between 0-9: ")
+    user_number = random.randint(1, 9)
     # process and output
     print("")
-    if user_guess == number:
-        print("Hooray you guessed correctly !! :)")
-    else:
-        print("Oh No!!! you guessed incorrectly :(")
-
-    print("\nDone.")
+    try:
+        number_as_integer = int(number_as_string)
+        if number_as_integer == user_number:
+            print("Hooray you guessed correctly !! :)")
+        else:
+            print("Oh No!!! you guessed incorrectly :(")
+    except Exception:
+        print("Not an integer")
+    finally:
+        print("\nDone.")
 
 
 if __name__ == "__main__":
