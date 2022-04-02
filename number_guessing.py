@@ -24,7 +24,7 @@ def main():
         else:
             print("Oh No!!! you guessed incorrectly :(")
     except Exception:
-        print("Not an integer")
+        print("Really? (-_-)ゞ pick a Integer pls ")
     finally:
         print("\nDone.")
 
